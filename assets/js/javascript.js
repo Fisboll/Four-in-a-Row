@@ -24,13 +24,13 @@ function newGame(button) {
         }
         clicked() {
             const el = this.element;
-            if (!el.classList.document("clickable")) return;
+            if (!el.classList.contains("clickable")) return;
             el.style.backgroundColor = nextColor;
             this.state = nextColor;
             //make Next element clickable
-            if(slotsArray[this.column][this.row-1] ){
-                slotsArray[this.column][this.row-1].element.classList.add('clickable', nextColor);
-                
+            if(slotsArray[this.column][this.row - 1]) {
+                slotsArray[this.column][this.row - 1].element.classList.add("clickable", nextColor);
+
             }
         }
     }
