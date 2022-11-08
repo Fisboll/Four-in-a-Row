@@ -1,6 +1,6 @@
 #gameContainer {
-    width: auto;
-    height: 420px;
+    width: 600px;
+    height: 450px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
