@@ -8,7 +8,7 @@ function newGame(button) {
     //determine the next color
     let nextColor = "red";
     //Create columns
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 7; i++) {
         const column = document.createElement('div');
         dispatchEvent.className = "column"
         column.className = "column";
@@ -22,12 +22,22 @@ function newGame(button) {
             this.element = element;
             this.state = "";
         }
-        clicked() {}
+        clicked() {
+            const el = this.element;
+            if (!el.classList.document("clickable")) return;
+            el.style.backgroundColor = nextColor;
+            this.state = nextColor;
+            //make Next element clickable
+            if(slotsArray[this.column][this.row-1] ){
+                slotsArray[this.column][this.row-1].element.classList.add('clickable', nextColor);
+                
+            }
+        }
     }
     //create slots and push to columns
     columns.forEach((el, col) => {
         let slotColumn = [];
-        for(i = 0; i < 9; i++){
+        for(i = 0; i < 6; i++){
             const div = document.createElement("div");
             div.classList.add("slot");
             el.appendChild(div);
@@ -36,10 +46,27 @@ function newGame(button) {
             div.onclick = function() {
                 slot.clicked();
             };
+            div.style.top = i * 70 + 2 + "px";
         }
         slotsArray.push(slotColumn);
     });
+    slotsArray.forEach(col=>{
+        col[5].element.classList.add('clickable', nextColor);
+    })
     console.log(slotsArray);
 }
+//check if game is draw
+function isDraw(slotsArray){
 
+}
+//Check if there is a winner
+function isWinner(slotsArray){
+
+}
+function gameOver(slotsArray){
+
+}
+function setScore(winner){
+
+}
 newGame(document.getElementById("playButton"));
