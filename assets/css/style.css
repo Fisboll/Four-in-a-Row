@@ -1,0 +1,30 @@
+#gameContainer {
+    width: auto;
+    height: 420px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    border: 7px solid blue;
+    box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+}
+
+.column {
+    border: 7px solid blue;
+    width: 59px;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+}
+.slot {
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    height: 48px;
+    border-radius: 50%;
+}

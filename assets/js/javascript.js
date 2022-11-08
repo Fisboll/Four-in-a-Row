@@ -10,8 +10,8 @@ function newGame(button) {
     //Create columns
     for (let i=0; i < 10; i++) {
         const column = document.createElement("div");
-        dispatchEvent.className = "column";
-        game.appendChild(div);
+        column.className = "column";
+        game.appendChild(column);
         Columns.push(column);
     }
     class Slot {
@@ -29,7 +29,6 @@ function newGame(button) {
         for(i = 0; i < 9; i++){
             const div = document.createElement("div");
             div.classList.add("slot");
-            el.appendChild(div);
             const slot = new Slot(div, col, i);
             slotColumn.push(slot);
             div.onclick = function() {
