@@ -8,7 +8,7 @@ function newGame(button) {
     //determine the next color
     let nextColor = "red";
     //Create columns
-    for (let i=0; i<10;i++) {
+    for (let i=0; i < 10; i++) {
         const column = document.createElement("div");
         dispatchEvent.className = "column";
         game.appendChild(div);
@@ -24,13 +24,21 @@ function newGame(button) {
         clicked() {}
     }
     //create slots and push to columns
-    Columns.forEach(el, col) => {
+    Columns.forEach((el, col) => {
         let slotColumn = [];
-        for(i=0;i<9;i++){
+        for(i = 0; i < 9; i++){
             const div = document.createElement("div");
             div.classList.add("slot");
-            
+            el.appendChild(div);
+            const slot = new Slot(div, col, i);
+            slotColumn.push(slot);
+            div.onclick = function() {
+                slot.clicked();
+            };
         }
-    }
+        slotsArray.push(slotsColumn);
+    });
+    console.log(slotsArray);
 
 }
+
