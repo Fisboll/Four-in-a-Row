@@ -29,9 +29,14 @@ function newGame(button) {
             this.state = nextColor;
             //make Next element clickable
             if(slotsArray[this.column][this.row - 1]) {
-                slotsArray[this.column][this.row - 1].element.classList.add("clickable", nextColor);
-
+                slotsArray[this.column][this.row - 1].element.classList.add(
+                    "clickable",
+                    nextColor
+                );
             }
+
+            //change next color
+            nextColor == "red" ? (nextColor = "yellow") : (nextColor = "red"); 
         }
     }
     //create slots and push to columns
