@@ -1,6 +1,8 @@
+const game = document.getElementById("gameContainer")
+const playButton = documnet.getElementById("playButton")
+
 function newGame(button) {
     button.style.display = "none";
-    const game = document.getElementById("gameContainer")
     //Columns
     const columns = [];
     //array that stoes columns/rows
@@ -36,7 +38,7 @@ function newGame(button) {
             }
 
             //change next color
-            nextColor == "red" ? (nextColor = "yellow") : (nextColor = "red"); 
+            nextColor == "red" ? nextColor = "yellow" : nextColor = "red"; 
         }
     }
     //create slots and push to columns
@@ -74,4 +76,4 @@ function gameOver(slotsArray){
 function setScore(winner){
 
 }
-newGame(document.getElementById("playButton"));
+newGame(playButton);
