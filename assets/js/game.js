@@ -37,6 +37,8 @@ function newGame(button) {
                 );
             }
 
+            console.log(slotsArray)
+
             //change next color
             nextColor == "red" ? nextColor = "yellow" : nextColor = "red"; 
         }
