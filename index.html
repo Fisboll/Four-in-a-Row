@@ -8,10 +8,15 @@
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body onload="newGame">
-    <section id="scoreBoard">
+<body>
+    <div id="gameContainer">
+        <div id='playButton' onclick="newGame(this)">
+            <div>Play Game</div>
+        </div>
+    </div>
+        <div class="scoreBoard">
         <h4>Score Board:</h4>
-        <div class='scores'>
+        <div class="score">
             <div class='score'>
                 <h6 id="playerOne">Red :</h6>
                 <p id='redScore'>0</p>
@@ -21,12 +26,6 @@
                 <p id='yellowScore'>0</p>
             </div>
         </div>
-    </section>
-    <div id="gameContainer">
-        <div id='playButton' onclick="newGame(this)">
-            <div>Play Game</div>
-        </div>
-    </div>
     <script src="assets/js/game.js"></script>
 </body>
 
