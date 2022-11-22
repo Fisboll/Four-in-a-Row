@@ -26,6 +26,7 @@ function newGame(button) {
       if (!el.classList.contains("clickable")) return;
       el.style.backgroundColor = nextColor;
       this.state = nextColor;
+      
       //make this element not clickable
       el.classList.remove("clickable");
       //make next element clickable
@@ -34,7 +35,7 @@ function newGame(button) {
           "clickable",
           nextColor
         );
-      }
+      };
       //check for game over
       if (isDraw(slotsArray) == true) gameOver(nextColor);
 
