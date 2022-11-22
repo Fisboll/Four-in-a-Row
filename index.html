@@ -9,22 +9,22 @@
 </head>
 
 <body>
-    <div id="gameContainer">
-        <div id='playButton' onclick="newGame(this)">
-            <div>Play Game</div>
-        </div>
-    </div>
-    <div id='scoreBoard'>
+    <section id="scoreBoard">
         <h4>Score Board:</h4>
         <div class='scores'>
             <div class='score'>
-                <h6>Red :</h6>
+                <h6 id="playerOne">Red :</h6>
                 <p id='redScore'>0</p>
             </div>
             <div class='score'>
-                <h6>Yellow :</h6>
+                <h6 id="playerTwo">Yellow :</h6>
                 <p id='yellowScore'>0</p>
             </div>
+        </div>
+    </section>
+    <div id="gameContainer">
+        <div id='playButton' onclick="newGame(this)">
+            <div>Play Game</div>
         </div>
     </div>
     <script src="assets/js/game.js"></script>

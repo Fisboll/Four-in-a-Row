@@ -7,6 +7,9 @@
     justify-content: center;
     border: 7px solid blue;
     box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    bottom: 50px; 
+    left: 675px;
 }
 
 .column{
@@ -47,14 +50,29 @@
 }
 #scoreBoard{
     position:absolute;
-    bottom:0;
+    top: 0;
+    left: 750px;
     display:flex;
     flex-wrap: nowrap;
     flex-direction: column;
+    font-size: 50px;
 }
 
 .scores{
     display:flex;
     flex-direction: row;
-    justify-content: space-between;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+#playerOne {
+    float: left;
+    color: red;
+    font-size: 25px;
+}
+
+#playerTwo {
+    float: right;
+    color: rgba(194, 194, 0, 0.842);
+    font-size: 25px;
 }

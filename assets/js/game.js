@@ -1,6 +1,6 @@
+const game = document.getElementById("gameContainer");
 function newGame(button) {
   button.style.display = "none";
-  const game = document.getElementById("gameContainer");
   //columns
   const columns = [];
   //array that stores columns/rows
