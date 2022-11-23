@@ -1,6 +1,6 @@
 const game = document.getElementById("gameContainer");
-function newGame(button) {
-  button.style.display = "none";
+
+function newGame() {
   //columns
   const columns = [];
   //array that stores columns/rows
@@ -37,7 +37,7 @@ function newGame(button) {
         );
       };
       //check for game over
-      if (isDraw(slotsArray) == true) gameOver(nextColor);
+      if (isDraw(slotsArray) == true) gameOver(undefined);
 
       if (isWinner(this.column, this.row, nextColor, slotsArray) == true)
         gameOver(nextColor);
@@ -70,7 +70,6 @@ function newGame(button) {
   slotsArray.forEach((col) => {
     col[5].element.classList.add("clickable", nextColor);
   });
-  console.log(slotsArray);
 }
 //check if game is draw
 function isDraw(slotsArray) {
@@ -96,7 +95,6 @@ function testLines(lines, color, slotsArray) {
         if (typeof slotsArray[column][row] !== "undefined") {
           if (slotsArray[column][row].state == color) {
             connectedSlots += 1;
-            console.log(connectedSlots);
           } else break;
         }
       } else break;
@@ -171,19 +169,24 @@ function isWinner(col, row, color, slotsArray) {
 }
 //check if game is over
 function gameOver(winner) {
-  console.log("game over");
   setScore(winner);
-  //delete game
-  document.querySelectorAll(".column").forEach((column) => {
-    column.innerHTML = "";
-    column.parentNode.removeChild(column);
-    document.getElementById("playButton").style.display = "inherit";
-  });
-}
+  resetGame();
+  };
 //set score on the scoreboard
 function setScore(winner) {
-  if (winner == "undefined") return;
-
-  document.getElementById(winner + "Score").innerHTML =
+  if (winner !== undefined){
+    document.getElementById(winner + "Score").innerHTML =
     parseInt(document.getElementById(winner + "Score").innerHTML) + 1;
+  }
 }
+
+function resetGame() {
+   //delete game
+   document.querySelectorAll(".column").forEach((column) => {
+    column.innerHTML = "";
+    column.parentNode.removeChild(column);
+   });
+   newGame()
+  };
+
+  newGame();
