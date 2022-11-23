@@ -35,7 +35,7 @@ function newGame() {
           "clickable",
           nextColor
         );
-      };
+      }
       //check for game over
       if (isDraw(slotsArray) == true) gameOver(undefined);
 
@@ -44,7 +44,7 @@ function newGame() {
 
       //change next color
       let oldColor = nextColor;
-      nextColor == "red" ? (nextColor = "yellow") : (nextColor = "red");
+      nextColor == "red" ? nextColor = "yellow" : nextColor = "red";
       document.querySelectorAll(".clickable").forEach((el) => {
         el.classList.remove(oldColor);
         el.classList.add(nextColor);
@@ -171,7 +171,7 @@ function isWinner(col, row, color, slotsArray) {
 function gameOver(winner) {
   setScore(winner);
   resetGame();
-  };
+  }
 //set score on the scoreboard
 function setScore(winner) {
   if (winner !== undefined){
@@ -186,7 +186,7 @@ function resetGame() {
     column.innerHTML = "";
     column.parentNode.removeChild(column);
    });
-   newGame()
-  };
+   newGame();
+  }
 
   newGame();
