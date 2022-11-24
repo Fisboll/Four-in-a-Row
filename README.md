@@ -1,5 +1,9 @@
 # **Four in a row**
 
+This is a retro online game that allows you to play Four in a row in a Lan like sense, this isn't an online feature but local to whoever you're playing with.
+
+![Four-in-a-row](/assets/images/Gameboard.png)
+
 ## **Planning stage**
 ### **Target Audiences:**
 ​
@@ -22,6 +26,8 @@ Then there are similar colors on the names for each player corresponding correct
 #### *features
 ​
 Its four in a row. You're able to play in a lan motion with someone else on the same computer, you can win in any direction aslong as you get 4 in a row. The features are that it automatically adds score points to the corresponding person depending if Red or Yellow wins. There is also a Draw which would then just reset the game without giving anyone points.
+
+Most features are simple, you click on one color. And then you click on another empty space, The game will calculate how many colors there are in a row and when there is 4 given the game will end and a new will start. If there is no winners the game will Draw and neither will get a point and it will just restart.
 ​
 ## **Future-Enhancements**
 ​
@@ -32,6 +38,8 @@ Online mode, so you can play online with other people and pottentially add an AI
 This is the hardest bit of the readme, when we have completed a page we need to discuss testing.
 ​
 Here is a good idea to talk about how and why you have tested with certain tools and validators so here a list of things to talk through
+
+* The testing phase would be solved by basically playing the game over and oveer.
 ​
 * Its responsive elements are working, it doesn't lag out as to say and it remains a nice funcion and works on both Mobile, tablet and PC.
 ​
@@ -46,6 +54,10 @@ Here is a good idea to talk about how and why you have tested with certain tools
 ## **Bugs**
 ​
 None that I know of. The game seems to be running fine without causing any sort of bugs.
+
+## **Bugs I had**
+
+* Couldn't manage to figure out how to make it 'draw' as whenever I drawed it gave a point to the Yellow team. 
 ​
 ***
 ## **Deployment**
@@ -70,4 +82,5 @@ Here mention what technologies you've used for example
 ## **Credits**
 ### **Honorable mentions**
 ​
-It's always nice to mention those that helped you get there, if people gave you support on slack or the local cat scared you into completing give them a mention!
+* One of the helps I took mostly was this Youtube Video [Youtube](https://www.youtube.com/watch?v=LRz6r8Q-Jvk&ab_channel=CodingWithMike)
+* Second was my mentor Richard that helped me with inputs and fixing some minor bugs I couldn't figure out myself.
