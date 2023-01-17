@@ -104,3 +104,111 @@ function checkLines(lines, color, slotsArray) {
   if (connectedSlots >= 4) return true;
   return false;
 }
+
+//check if there is a winner
+function isWinner(col, row, color, slotsArray) {
+  const winningLines = {
+    horizontal: [
+      [
+        [col - 1, row],
+        [col - 2, row],
+        [col - 3, row],
+      ],
+      [
+        [col + 1, row],
+        [col + 2, row],
+        [col + 3, row],
+      ],
+    ],
+    vertical: [
+      [
+        [col, row - 1],
+        [col, row - 2],
+        [col, row - 3],
+      ],
+      [
+        [col, row + 1],
+        [col, row + 2],
+        [col, row + 3],
+      ],
+    ],
+    diagonalLeft: [
+      [
+        [col - 1, row - 1],
+        [col - 2, row - 2],
+        [col - 3, row - 3],
+      ],
+      [
+        [col + 1, row + 1],
+        [col + 2, row + 2],
+        [col + 3, row + 3],
+      ],
+    ],
+    diagonalRight: [
+      [
+        [col - 1, row + 1],
+        [col - 2, row + 2],
+        [col - 3, row + 3],
+      ],
+      [
+        [col + 1, row - 1],
+        [col + 2, row - 2],
+        [col + 3, row - 3],
+      ],
+    ],
+  };
+
+  if (checkLines(winningLines.horizontal, color, slotsArray) == true)
+    return true;
+
+  if (checkLines(winningLines.vertical, color, slotsArray) == true) return true;
+  if (checkLines(winningLines.diagonalLeft, color, slotsArray) == true)
+    return true;
+
+  if (checkLines(winningLines.diagonalRight, color, slotsArray) == true)
+    return true;
+
+  return false;
+}
+//check if game is over
+function gameOver(winner) {
+  setScore(winner);
+}
+//set score on the scoreboard
+function setScore(winner) {
+  if (winner !== undefined) {
+    document.getElementById(winner + "Score").innerHTML =
+      parseInt(document.getElementById(winner + "Score").innerHTML) + 1;
+  }
+
+  displayPopup(winner)
+}
+
+function resetGame() {
+  deleteGame();
+  columns = [];
+  slotsArray = [];
+
+  newGame();
+}
+
+function deleteGame() {
+  document.querySelectorAll(".column").forEach((column) => {
+    column.innerHTML = "";
+    column.parentNode.removeChild(column);
+  });
+}
+
+function displayPopup(result) {
+  const icon = result ? 'success' : 'info'
+  const title = result ? `${result} Wins!` : 'Draw!'
+
+  Swal.fire({
+    position: 'center',
+    icon: icon,
+    title: title,
+    showConfirmButton: false,
+    timer: 2000
+  }).then(() => { resetGame() })
+}
+newGame();
