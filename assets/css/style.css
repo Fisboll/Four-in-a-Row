@@ -1,3 +1,9 @@
+.container {
+    display: flex;
+    justify-content: center;    
+}
+
+
 #gameContainer{
     width:420px;
     height:420px;
