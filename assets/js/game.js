@@ -39,3 +39,36 @@ class Slot {
     });
   }
 }
+
+
+
+function newGame() {
+  boardBuilder();
+}
+
+function boardBuilder() {
+  for (let i = 0; i < 7; i++) {
+    const column = document.createElement("div");
+    column.className = "column";
+    game.appendChild(column);
+    columns.push(column);
+  }
+  columns.forEach((el, col) => {
+    let slotColumn = [];
+    for (i = 0; i < 6; i++) {
+      const div = document.createElement("div");
+      div.classList.add("slot");
+      el.appendChild(div);
+      const slot = new Slot(div, col, i);
+      slotColumn.push(slot);
+      div.onclick = function () {
+        slot.clicked();
+      };
+      div.style.top = i * 70 + 2 + "px";
+    }
+    slotsArray.push(slotColumn);
+  });
+  slotsArray.forEach((col) => {
+    col[5].element.classList.add("clickable", nextColor);
+  });
+}
