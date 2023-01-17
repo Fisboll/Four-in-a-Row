@@ -1,13 +1,9 @@
 const game = document.getElementById("gameContainer");
 
 function newGame() {
-  //columns
   const columns = [];
-  //array that stores columns/rows
   const slotsArray = [];
-  //determine the next color
   let nextColor = "red";
-  //create columns
   for (let i = 0; i < 7; i++) {
     const column = document.createElement("div");
     column.className = "column";
