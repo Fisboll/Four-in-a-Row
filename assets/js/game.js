@@ -72,3 +72,35 @@ function boardBuilder() {
     col[5].element.classList.add("clickable", nextColor);
   });
 }
+
+//check if game is draw
+function isDraw(slotsArray) {
+  let isDraw = true;
+  slotsArray.forEach((col) => {
+    col.forEach((slot) => {
+      if (slot.state == "") isDraw = false;
+    });
+  });
+  return isDraw;
+}
+
+//test the lines to see if someone has won
+function checkLines(lines, color, slotsArray) {
+  let connectedSlots = 1; 
+  lines.forEach((line) => {
+    for (i = 0; i < line.length; i++) {
+      const slotLocation = line[i];
+      column = slotLocation[0];
+      row = slotLocation[1];
+      if (column >= 0 && column <= 6 && row >= 0 && row <= 5) {
+        if (typeof slotsArray[column][row] !== "undefined") {
+          if (slotsArray[column][row].state == color) {
+            connectedSlots += 1;
+          } else break;
+        }
+      } else break;
+    }
+  });
+  if (connectedSlots >= 4) return true;
+  return false;
+}
