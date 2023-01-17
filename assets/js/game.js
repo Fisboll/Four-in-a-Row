@@ -41,7 +41,6 @@ class Slot {
 }
 
 
-
 function newGame() {
   boardBuilder();
 }
@@ -64,7 +63,7 @@ function boardBuilder() {
       div.onclick = function () {
         slot.clicked();
       };
-      div.style.top = i * 70 + 2 + "px";
+      div.style.top = i * 100 + 2 + "px";
     }
     slotsArray.push(slotColumn);
   });
