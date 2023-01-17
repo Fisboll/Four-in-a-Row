@@ -1,6 +1,6 @@
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: center
 }
 
 
@@ -70,28 +70,25 @@ h4 {
 
 #right-about {
     padding-top: 30px;
-    float: left;
 }
 
 #right-about-heading {
     float: right;
     line-height: 20px;
     margin-bottom: 50px;
-    margin-top: 40px;
-    width: 20%;
+    width: 25%;
     text-align: center;
 }
 
 #left-about {
     padding-top: 30px;
-    float: right;
 }
 
 #left-about-heading {
     float:left;
     line-height: 20px;
     margin-bottom: 50px;
-    width: 20%; 
+    width: 25%; 
     text-align: center;
 }
 
@@ -101,4 +98,35 @@ h4 {
 
 #yellowScore {
     font-size:50px;
+}
+
+@media screen and (max-width:1050px) {
+
+.container {
+    width: 100%;
+}
+#right-about-heading {
+    width: 50%;
+}
+
+#left-about-heading {
+    width: 50%;
+}
+
+}
+
+@media screen and (max-width:600px) {
+
+#gameContainer {
+    width: 100%;
+}
+
+#playerTwo {
+    font-size: 45px;
+}
+
+#playerOne {
+    font-size: 45px;
+}
+
 }
