@@ -68,11 +68,8 @@ h4 {
     font-size: 60px;
 }
 
-#right-about {
+#red-scoreboard {
     padding-top: 30px;
-}
-
-#right-about-heading {
     float: right;
     line-height: 20px;
     margin-bottom: 50px;
@@ -80,16 +77,13 @@ h4 {
     text-align: center;
 }
 
-#left-about {
-    padding-top: 30px;
-}
-
-#left-about-heading {
+#yellow-scoreboard {
     float:left;
     line-height: 20px;
     margin-bottom: 50px;
     width: 25%; 
     text-align: center;
+    padding-top: 30px;
 }
 
 #redScore {
@@ -105,11 +99,11 @@ h4 {
 .container {
     width: 100%;
 }
-#right-about-heading {
+#red-scoreboard {
     width: 50%;
 }
 
-#left-about-heading {
+#yellow-scoreboard {
     width: 50%;
 }
 
