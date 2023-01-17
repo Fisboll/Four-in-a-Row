@@ -3,10 +3,17 @@
     justify-content: center
 }
 
+body {
+    background-color: black;
+}
+
+h1 {
+    color: white;
+}
 
 #gameContainer{
-    width:540px;
-    height:630px;
+    width:600px;
+    height:610px;
     display:flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -42,22 +49,6 @@
     background-color: yellow;
 }
 
-#scoreBoard{
-    display:flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-}
-
-h4 {
-    font-size: 30px;
-}
-
-.scores{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 #playerOne {
     color: red;
     font-size: 60px;
@@ -88,10 +79,12 @@ h4 {
 
 #redScore {
     font-size:50px;
+    color: white;
 }
 
 #yellowScore {
     font-size:50px;
+    color: white;
 }
 
 @media screen and (max-width:1050px) {
