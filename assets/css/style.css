@@ -1,6 +1,6 @@
 .container {
     display: flex;
-    justify-content: center;    
+    justify-content: center;
 }
 
 
@@ -13,6 +13,7 @@
     justify-content: center;
     border: 7px solid blue;
     box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+    margin: 0;
 }
 
 .column{
@@ -59,7 +60,7 @@ h4 {
 
 #playerOne {
     color: red;
-    font-size: 20px;
+    font-size: 60px;
 }
 
 #playerTwo {
@@ -67,15 +68,30 @@ h4 {
     font-size: 60px;
 }
 
-#right {
-    justify-content: right;
-    float:right;
-    text-align: right;
+#right-about {
+    padding-top: 30px;
+    float: left;
 }
 
-#left {
-    justify-content: left;
-    float: left;
+#right-about-heading {
+    float: right;
+    line-height: 20px;
+    margin-bottom: 50px;
+    margin-top: 40px;
+    width: 20%;
+    text-align: center;
+}
+
+#left-about {
+    padding-top: 30px;
+    float: right;
+}
+
+#left-about-heading {
+    float:left;
+    line-height: 20px;
+    margin-bottom: 50px;
+    width: 20%; 
     text-align: center;
 }
 
