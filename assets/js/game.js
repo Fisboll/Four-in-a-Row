@@ -208,6 +208,6 @@ function displayPopup(result) {
     title: title,
     showConfirmButton: false,
     timer: 2000
-  }).then(() => { resetGame() });
+  }).then(() => { resetGame(); });
 }
 newGame();
