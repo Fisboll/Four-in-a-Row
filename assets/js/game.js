@@ -180,7 +180,7 @@ function setScore(winner) {
       parseInt(document.getElementById(winner + "Score").innerHTML) + 1;
   }
 
-  displayPopup(winner)
+  displayPopup(winner);
 }
 
 function resetGame() {
@@ -199,8 +199,8 @@ function deleteGame() {
 }
 
 function displayPopup(result) {
-  const icon = result ? 'success' : 'info'
-  const title = result ? `${result} Wins!` : 'Draw!'
+  const icon = result ? 'success' : 'info';
+  const title = result ? `${result} Wins!` : 'Draw!';
 
   Swal.fire({
     position: 'center',
@@ -208,6 +208,6 @@ function displayPopup(result) {
     title: title,
     showConfirmButton: false,
     timer: 2000
-  }).then(() => { resetGame() })
+  }).then(() => { resetGame() });
 }
 newGame();
