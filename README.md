@@ -29,6 +29,8 @@ Its four in a row. You're able to play in a lan motion with someone else on the 
 
 Most features are simple, you click on one color. And then you click on another empty space, The game will calculate how many colors there are in a row and when there is 4 given the game will end and a new will start. If there is no winners the game will Draw and neither will get a point and it will just restart.
 ​
+A new feature which has been added, instead of it reseting that red starts all the time. The person who loses gets to start. If red wins, yellow starts. If Yellow wins, Red starts etc.
+
 ## **Future-Enhancements**
 ​
 Online mode, so you can play online with other people and pottentially add an AI into the game you can play against using random number generator.
@@ -45,10 +47,10 @@ Here is a good idea to talk about how and why you have tested with certain tools
 ​
 * The Java script follows command fully.
 ​
-![Validator](/assets/images/W3C%20validator.png)
-![Jigsaw](/assets/images/Jigsaw%20Validator.png)
-![Lighthouse](/assets/images/Lighthouse.png)
-![Javascript](/assets/images/Javascript.png)
+![Validator](/assets/images/HTML%20Validator.png)
+![Jigsaw](/assets/images/CSS%20validator.png)
+![Lighthouse](/assets/images/Light%20House%20Validator.png)
+![Javascript](/assets/images/Javascript%20Validator.png)
 ​
 ​
 ## **Bugs**
