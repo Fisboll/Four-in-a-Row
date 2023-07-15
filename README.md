@@ -2,7 +2,7 @@
 
 This is a retro online game that allows you to play Four in a row in a Lan like sense, this isn't an online feature but local to whoever you're playing with.
 
-![Four-in-a-row](/assets/images/Gameboard.png)
+![Four-in-a-row](/assets/images/gameboard.png)
 
 ## **Planning stage**
 ### **Target Audiences:**
