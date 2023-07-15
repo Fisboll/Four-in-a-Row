@@ -59,7 +59,7 @@ h1 {
     font-size: 60px;
 }
 
-#red-scoreboard {
+#yellow-scoreboard {
     padding-top: 30px;
     float: right;
     line-height: 20px;
@@ -68,7 +68,7 @@ h1 {
     text-align: center;
 }
 
-#yellow-scoreboard {
+#red-scoreboard {
     float:left;
     line-height: 20px;
     margin-bottom: 50px;
@@ -77,12 +77,12 @@ h1 {
     padding-top: 30px;
 }
 
-#redScore {
+#yellowScore {
     font-size:50px;
     color: white;
 }
 
-#yellowScore {
+#redScore {
     font-size:50px;
     color: white;
 }
