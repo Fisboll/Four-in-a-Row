@@ -62,6 +62,7 @@ function setupGame() {
   namePlayerOne.innerHTML += " " + redPlayer;
   if (playerCount < 2) {
     namePlayerTwo.innerHTML += " CPU";
+    yellowPlayer = "CPU";
   } else {
     namePlayerTwo.innerHTML += " " + yellowPlayer
   ;
@@ -263,7 +264,7 @@ function setScore(winner) {
 if (winner == "red") {
   displayPopup(redPlayer);
 }  else if (winner == "yellow") {
-    display(yellowPlayer);
+    displayPopup(yellowPlayer);
   }
 }
 
