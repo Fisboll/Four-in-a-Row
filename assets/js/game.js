@@ -63,7 +63,6 @@ function setupGame() {
 
   document.getElementById('game-setup').innerHTML = "";
   gameStarted = true
-  newGame()
 }
 
 function hidePlayerTwo(input) {
