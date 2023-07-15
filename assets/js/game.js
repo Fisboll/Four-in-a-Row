@@ -42,6 +42,8 @@ class Slot {
       el.classList.remove(oldColor);
       el.classList.add(nextColor);
     });
+
+    AIturn();
   }
 }
 
@@ -79,6 +81,40 @@ function hidePlayerTwo(input) {
     document.getElementById('player-two-name-label').style.display = 'inline';
     document.getElementById('player-two-name').style.display = 'inline';
     playerCount = 2
+  }
+}
+
+function AIturn() {
+  if (nextColor != "yellow") return; 
+
+  let availableColumns = [];
+  for (let i = 0; i < slotsArray.length; i++) {
+    for (let j = slotsArray[i].length - 1; j >= 0; j--) {
+      if (
+        slotsArray[i][j].state === "" &&
+        (j === slotsArray[i].length - 1 || slotsArray[i][j + 1].state !== "")
+      ) {
+        availableColumns.push(i);
+        break;
+      }
+    }
+  }
+
+  if (availableColumns.length === 0) return;
+
+  let randomColumn =
+    availableColumns[Math.floor(Math.random() * availableColumns.length)];
+
+  let slotIndex = slotsArray[randomColumn]
+    .slice()
+    .reverse()
+    .findIndex((slot) => slot.state === "");
+
+  slotIndex =
+    slotIndex >= 0 ? slotsArray[randomColumn].length - 1 - slotIndex : -1;
+
+  if (slotIndex >= 0) {
+    slotsArray[randomColumn][slotIndex].element.click();
   }
 }
 
