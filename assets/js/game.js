@@ -64,7 +64,6 @@ function setupGame() {
   document.getElementById('game-setup').innerHTML = "";
   gameStarted = true
   newGame()
-  console.log(setupGame)
 }
 
 function hidePlayerTwo(input) {
@@ -83,7 +82,6 @@ function newGame() {
   if (gameStarted) {
     boardBuilder();
   }
-  console.log(newGame)
 }
 
 function boardBuilder() {
@@ -110,7 +108,6 @@ function boardBuilder() {
   });
   slotsArray.forEach((col) => {
     col[5].element.classList.add("clickable", nextColor);
-    console.log(boardBuilder)
   });
 }
 
@@ -242,7 +239,8 @@ function deleteGame() {
 
 function displayPopup(result) {
   const icon = result ? 'success' : 'info';
-  const title = result ? `${playerOneName, playerTwoName} Wins!` : 'Draw!';
+  const title = result ? `${result} Wins!` : 'Draw!';
+  console.log(displayPopup)
 
   Swal.fire({
     position: 'center',
