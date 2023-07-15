@@ -110,6 +110,7 @@ function boardBuilder() {
     col[5].element.classList.add("clickable", nextColor);
   });
 }
+console.log(boardBuilder)
 
 //check if game is draw
 function isDraw(slotsArray) {
