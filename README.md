@@ -31,6 +31,10 @@ Most features are simple, you click on one color. And then you click on another 
 ​
 A new feature which has been added, instead of it reseting that red starts all the time. The person who loses gets to start. If red wins, yellow starts. If Yellow wins, Red starts etc.
 
+There is now a section where you can decide to play one or two players, If you play two players each Player is able to put in their names in each section before playing the game. Then after that the game works as normal and intended.
+
+Added an AI. I added an Ai which now allows a player to play against a CPU. It uses a random number generator which means that there is a very good chance that the options it will pick is not the smartest but didn't wanna make it too smart and just outplay the player all the time. 
+
 ## **Future-Enhancements**
 ​
 Online mode, so you can play online with other people and pottentially add an AI into the game you can play against using random number generator.
@@ -49,13 +53,15 @@ Here is a good idea to talk about how and why you have tested with certain tools
 ​
 ![Validator](/assets/images/HTML%20Validator.png)
 ![Jigsaw](/assets/images/CSS%20validator.png)
-![Lighthouse](/assets/images/Light%20House%20Validator.png)
-![Javascript](/assets/images/Javascript%20Validator.png)
+![Lighthouse](/assets/images/lighthouse.png)
+![Javascript](/assets/images/Javascript.png)
 ​
 ​
 ## **Bugs**
 ​
 None that I know of. The game seems to be running fine without causing any sort of bugs.
+
+On the Javascript file it says that Setupgame/HideplayerTwo is unused. But their being used in the HTML file.
 
 ## **Bugs I had**
 
