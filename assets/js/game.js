@@ -242,7 +242,7 @@ function deleteGame() {
 
 function displayPopup(result) {
   const icon = result ? 'success' : 'info';
-  const title = result ? `${result} Wins!` : 'Draw!';
+  const title = result ? `${playerOneName, playerTwoName} Wins!` : 'Draw!';
 
   Swal.fire({
     position: 'center',
