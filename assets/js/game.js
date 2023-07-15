@@ -42,9 +42,10 @@ class Slot {
       el.classList.remove(oldColor);
       el.classList.add(nextColor);
     });
-
-    AIturn();
-  }
+    if (playerCount ===1) {
+      AIturn();
+    }
+  } 
 }
 
 function setupGame() {
