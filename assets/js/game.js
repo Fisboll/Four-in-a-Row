@@ -63,7 +63,6 @@ function setupGame() {
 
   document.getElementById('game-setup').innerHTML = "";
   gameStarted = true
-  console.log(playerCount)
   newGame()
 }
 
@@ -72,17 +71,17 @@ function hidePlayerTwo(input) {
     document.getElementById('player-two-name-label').style.display = 'none';
     document.getElementById('player-two-name').style.display = 'none';
     playerCount = 1
-    console.log(playerCount)
   } else {
     document.getElementById('player-two-name-label').style.display = 'inline';
     document.getElementById('player-two-name').style.display = 'inline';
     playerCount = 2
-    console.log(playerCount)
   }
 }
 
 function newGame() {
-  boardBuilder();
+  if (gameStarted) {
+    boardBuilder();
+  }
 }
 
 function boardBuilder() {
@@ -228,7 +227,7 @@ function resetGame() {
   columns = [];
   slotsArray = [];
 
-  newGame();
+  setupGame();
 }
 
 function deleteGame() {
@@ -250,4 +249,4 @@ function displayPopup(result) {
     timer: 2000
   }).then(() => { resetGame(); });
 }
-newGame();
+setupGame();
