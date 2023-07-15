@@ -1,8 +1,8 @@
 const game = document.getElementById("gameContainer");
 
 let gameStarted = false
-let playerOneName = 'Player 1'
-let playerTwoName = 'CPU'
+let redPlayer = 'Player 1'
+let yellowPlayer = 'CPU'
 let playerCount = 1
 
 let nextColor = "red";
@@ -46,18 +46,22 @@ class Slot {
 }
 
 function setupGame() {
-  playerOneName = document.getElementById('player-one-name').value;
-  if (playerOneName === "") playerOneName = 'Player 1'
-  playerTwoName = document.getElementById('player-two-name').value;
-  if (playerTwoName === "") playerTwoName = 'Player 2'
+  redPlayer = document.getElementById('player-one-name').value;
+  if (redPlayer === "") redPlayer = 'Player 1'
+  yellowPlayer
+ = document.getElementById('player-two-name').value;
+  if (yellowPlayer
+   === "") yellowPlayer
+ = 'Player 2'
 
   let namePlayerOne = document.getElementById('playerOne');
   let namePlayerTwo = document.getElementById('playerTwo');
-  namePlayerOne.innerHTML += " " + playerOneName;
+  namePlayerOne.innerHTML += " " + redPlayer;
   if (playerCount < 2) {
     namePlayerTwo.innerHTML += " CPU";
   } else {
-    namePlayerTwo.innerHTML += " " + playerTwoName;
+    namePlayerTwo.innerHTML += " " + yellowPlayer
+  ;
   }
   
 
@@ -219,7 +223,11 @@ function setScore(winner) {
       parseInt(document.getElementById(winner + "Score").innerHTML) + 1;
   }
 
-  displayPopup(winner);
+if (winner == "red") {
+  displayPopup(redPlayer);
+}  else if (winner == "yellow") {
+    display(yellowPlayer);
+  }
 }
 
 function resetGame() {
@@ -240,7 +248,6 @@ function deleteGame() {
 function displayPopup(result) {
   const icon = result ? 'success' : 'info';
   const title = result ? `${result} Wins!` : 'Draw!';
-  console.log(displayPopup)
 
   Swal.fire({
     position: 'center',
