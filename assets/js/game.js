@@ -1,5 +1,10 @@
 const game = document.getElementById("gameContainer");
 
+let gameStarted = false
+let playerOneName = 'Player 1'
+let playerTwoName = 'CPU'
+let playerCount = 1
+
 let nextColor = "red";
 
 let columns = [];
@@ -40,6 +45,41 @@ class Slot {
   }
 }
 
+function setupGame() {
+  playerOneName = document.getElementById('player-one-name').value;
+  if (playerOneName === "") playerOneName = 'Player 1'
+  playerTwoName = document.getElementById('player-two-name').value;
+  if (playerTwoName === "") playerTwoName = 'Player 2'
+
+  let namePlayerOne = document.getElementById('playerOne');
+  let namePlayerTwo = document.getElementById('playerTwo');
+  namePlayerOne.innerHTML += " " + playerOneName;
+  if (playerCount < 2) {
+    namePlayerTwo.innerHTML += " CPU";
+  } else {
+    namePlayerTwo.innerHTML += " " + playerTwoName;
+  }
+  
+
+  document.getElementById('game-setup').innerHTML = "";
+  gameStarted = true
+  console.log(playerCount)
+  newGame()
+}
+
+function hidePlayerTwo(input) {
+  if (input) {
+    document.getElementById('player-two-name-label').style.display = 'none';
+    document.getElementById('player-two-name').style.display = 'none';
+    playerCount = 1
+    console.log(playerCount)
+  } else {
+    document.getElementById('player-two-name-label').style.display = 'inline';
+    document.getElementById('player-two-name').style.display = 'inline';
+    playerCount = 2
+    console.log(playerCount)
+  }
+}
 
 function newGame() {
   boardBuilder();
