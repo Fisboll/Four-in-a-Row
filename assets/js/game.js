@@ -64,6 +64,7 @@ function setupGame() {
   document.getElementById('game-setup').innerHTML = "";
   gameStarted = true
   newGame()
+  console.log(setupGame)
 }
 
 function hidePlayerTwo(input) {
@@ -82,6 +83,7 @@ function newGame() {
   if (gameStarted) {
     boardBuilder();
   }
+  console.log(newGame)
 }
 
 function boardBuilder() {
@@ -108,9 +110,9 @@ function boardBuilder() {
   });
   slotsArray.forEach((col) => {
     col[5].element.classList.add("clickable", nextColor);
+    console.log(boardBuilder)
   });
 }
-console.log(boardBuilder)
 
 //check if game is draw
 function isDraw(slotsArray) {
