@@ -227,7 +227,7 @@ function resetGame() {
   columns = [];
   slotsArray = [];
 
-  setupGame();
+  newGame();
 }
 
 function deleteGame() {
@@ -249,4 +249,4 @@ function displayPopup(result) {
     timer: 2000
   }).then(() => { resetGame(); });
 }
-setupGame();
+newGame();
