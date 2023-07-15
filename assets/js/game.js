@@ -78,7 +78,7 @@ function hidePlayerTwo(input) {
 }
 
 function newGame() {
-  if (gameStarted) {
+  if (gameStarted == true) {
     boardBuilder();
   }
 }
